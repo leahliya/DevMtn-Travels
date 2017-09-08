@@ -91,15 +91,15 @@ angular.module('devmtnTravel').service('mainService', function(){
 			return packages;
 		}
 
-		this.getImages = function(id){
-			var idArr = [];
-			for(var i  in this.packageInfo){
-				if (this.packageInfo[i].id == id){
-					idArr.push(this.packageInfo[i].image)
-				}
-			}
-			return idArr;
-		}
+		// this.getImages = function(id){
+		// 	var idArr = [];
+		// 	for(var i  in this.packageInfo){
+		// 		if (this.packageInfo[i].id == id){
+		// 			idArr.push(this.packageInfo[i].image)
+		// 		}
+		// 	}
+		// 	return idArr;
+		// }
 
 		
 })
