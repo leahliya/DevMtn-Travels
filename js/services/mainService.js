@@ -1,4 +1,4 @@
-angular.module('devmtnTravel').service('mainSrv', function(){
+angular.module('devmtnTravel').service('mainService', function(){
     this.travelInfo = [{
         country: 'United States',
         image: "../img/US.jpg",
@@ -80,4 +80,26 @@ angular.module('devmtnTravel').service('mainSrv', function(){
 				price: 1722.12
 			},
 		]
+
+		this.getPackages = function(country){
+			var packages = [];
+			for(var i  in this.packageInfo){
+				if (this.packageInfo[i].country == country){
+					packages.push(this.packageInfo[i])
+				}
+			}
+			return packages;
+		}
+
+		this.getImages = function(id){
+			var idArr = [];
+			for(var i  in this.packageInfo){
+				if (this.packageInfo[i].id == id){
+					idArr.push(this.packageInfo[i].image)
+				}
+			}
+			return idArr;
+		}
+
+		
 })
